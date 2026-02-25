@@ -6,7 +6,7 @@ st.set_page_config(page_title="Global Med-Queue", layout="wide")
 st.title("🏥 Global Med-Queue AI")
 
 # Load your Global Data
-df = pd.read_csv('hospitals.csv')
+df = pd.read_csv('HospitalsInIndia.csv')
 
 # User Input: Choosing their Area
 area = st.text_input("Enter your City or Country:", "Chennai")
@@ -26,4 +26,5 @@ if not results.empty:
     
     if st.button("Predict Wait Time (AI)"):
         # This is where your Random Forest/XGBoost works
+
         st.success("Estimated Wait Time: 24 Minutes")
