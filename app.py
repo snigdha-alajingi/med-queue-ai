@@ -16,7 +16,7 @@ results = df[df.apply(lambda row: row.astype(str).str.contains(area, case=False)
 
 if not results.empty:
     st.write(f"Found {len(results)} hospitals in {area}")
-    st.map(results) # Shows them on a map!
+    # Shows them on a map!
     
     # Let user pick a hospital to see details
     h_choice = st.selectbox("Select a Hospital:", results.iloc[:, 0])
@@ -28,3 +28,4 @@ if not results.empty:
         # This is where your Random Forest/XGBoost works
 
         st.success("Estimated Wait Time: 24 Minutes")
+
